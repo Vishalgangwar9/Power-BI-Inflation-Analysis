@@ -36,6 +36,7 @@ Adjustedinflationrate
 
 Adjustedinflationrate = global_inflation_data[Inflationrate]*.01
 
+
 InflationRateCategory
 InflationRateCategory = 
 switch(
@@ -43,6 +44,8 @@ switch(
     'global_inflation_data'[Inflationrate]< 2,"Low Inflation",
     'global_inflation_data'[Inflationrate] < 5, "moderate Inflation","high"
 )
+
+
 InflationRateChange
 InflationRateChange = 
 VAR CurrentYear = VALUE(MAX('global_inflation_data'[Year]))
